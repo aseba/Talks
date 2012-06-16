@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>
+    body{ font-family: sans-serif;}
+    ul{ list-style: disc; }
+    h1{ font-size: 2em; }
+    h2{ font-size: 1.5em; }
+    small{ font-size: .3em; }
+    </style>
+</head>
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    <div id="start" class="step" data-x="0" data-y="0">
+    	<h1>Escalando la interné like a boss</h1>
+    	<p>Amazon Web Services</p>
+    	<p>Que es y como lo usamos en Olapic</p>
+    	<p>#barcampcba<p>
+    	<br/>
+		<p style="text-align: right; font-size:.5em;">Sebastian Alvarez<br/>sebas@olapic.com<br/>@aseba<p>
+    </div>
+
+    <div id="estabueno" class="step" data-x="-2000" data-y="400"  data-rotate="90" data-scale="5">
+    	<h2>Porque esta bueno?</h2>
+    	<ul>
+    		<li>Ahorro infinito tiempo</li>
+    		<li>Graficos chetos para diagnóstico</li>
+    		<li>Matar un servidor y levantar otro es pseudo-gratis</li>
+    		<li>Buena documentación</li>
+    		<li>Route 53</li>
+    	</ul>
+    </div>
+
+    <div id="noestabueno" class="step" data-x="-7000" data-y="600"  data-rotate="-180" data-scale="5">
+    	<h2>Porque puede no estar bueno?</h2>
+    	<ul>
+    		<li>No es magia, hay que saber</li>
+    		<li>Hay un trillón de formas de hacer lo mismo</li>
+    		<li>Mucho todavía se hace con command lines no demasiado friendly</li>
+    	</ul>
+    </div>
+
+    <div id="ami" class="step" data-x="400" data-y="-2500" data-rotate="395" data-scale="2">
+    	<small>Fuaa, vieron como se movió?</small>
+    	<h2>Un AMI de Olapic</h2>
+    	<ul>
+    		<li>Varnish</li>
+    		<li>PHP (si, PHP, no leiste mal)</li>
+    		<li>Imagemagick</li>
+    	</ul>
+    </div>
+
+    <div id="loqueteniamos" class="step" data-x="1000" data-y="-1500" data-rotate="15">
+    	<h2>Lo que teníamos</h2>
+    	<img src="images/olapicarch.png" />
+    </div>
+
+    <div id="noanduvo" class="step" data-x="1300" data-y="-2500" data-rotate="190">
+    	<h2>Porque no anduvo</h2>
+    	<ul>
+    		<li>NFS es una bosta con mas de 3 instancias sobre él</li>
+    		<li>Las sesiones compartidas en archivos explotan (mas sobre nfs)</li>
+    		<li>Con esta arquitectura nos mataba el IO de disco</li>
+    		<li>Una carga en la base de datos nos dejaba mirando al techo y tardamos mucho en cambiar de instancia</li>
+    	</ul>
+    </div>
+
+    <div id="loqueteniamos2" class="step" data-x="3000" data-y="-1500" data-rotate="87">
+    	<h2>Lo que teníamos despues</h2>
+    	<img src="images/olapic20arch1.png" />
+    </div>
+
+    <div id="noanduvo2" class="step" data-x="2300" data-y="-2500" data-rotate="190">
+    	<h2>Porque no anduvo</h2>
+    	<ul>
+    		<li>NFS sigue siendo una bosta con mas de 3 instancias sobre él (pero no lo podíamos sacar)</li>
+    		<li>widgets.olapic.com se caía mas de lo que queriamos</li>
+    		<li>Mantener NFS y RSYNC sobre SSH es una de las negradas mas grandes que vi (y eso que escribo PHP)</li>
+    	</ul>
+    </div>
+
+    <div id="loquetenemos" class="step" data-x="5000" data-y="-1500" data-rotate="-61">
+    	<h2>Lo que tenemos ahora</h2>
+    	<img src="images/olapic20arch2.png" />
+    </div>
+
+    <div id="ami2" class="step" data-x="1602" data-y="-3900" data-rotate="205" data-scale="2">
+    	<h2>Un AMI de Olapic 2</h2>
+    	<ul>
+    		<li>Varnish</li>
+    		<li>Memcached</li>
+    		<li>PHP (si, sigue siendo php, pero mucho mas bonito)</li>
+    		<li>Imagemagick</li>
+    	</ul>
+    </div>
+
+    <div id="nosgusta" class="step" data-x="3300" data-y="-2500" data-rotate="190">
+    	<h2>Porque nos gusta mas</h2>
+    	<ul>
+    		<li>Menos flechitas significa menos lugares para que algo se rompa</li>
+    		<li>Al fin volamos NFS</li>
+    		<li>widgets.olapic.com no existe mas, ahora tenemos todo sobre S3 (4 dias copiando 500G de fotos)</li>
+    		<li>Amamos puppet, no podemos vivir sin el</li>
+    	</ul>
+    </div>
+
+   <div id="nosgusta2" class="step" data-x="3300" data-y="-3500" data-rotate="190">
+    	<h2>Porque nos gusta mas mas</h2>
+    	<ul>
+    		<li>Memcached para cachear respuestas de la DB redujo la carga en un 80% (no miento)</li>
+    	</ul>
+    </div>
+ 
+
+    <div id="loquenosgustaria" class="step" data-x="7000" data-y="-1500">
+    	<h2>Lo que nos gustaría tener</h2>
+    	<img src="images/olapic20archfuture.png" />
+    </div>
+
+    <div id="preguntas" class="step" data-x="9000" data-y="-1500">
+    	<h1>Preguntas?</h1>
+    	<p>Si quieren hacemos un show and tell de la consola<p>
+		<p>Si no, escriban: sebas@olapic.com</p>
+    </div>
+</div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
