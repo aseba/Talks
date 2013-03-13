@@ -1,0 +1,40 @@
+body {
+	font-size: 30px;
+	font-family: 'PT Sans', 'Helvetica Neue', sans-serif;
+	background: white;
+}
+div.presentation, div.slide {
+	background: transparent;
+}
+div.titleslide h1 {
+	padding-top: 0;
+	font-size: 3em;
+}
+div.slide h1, div.slide h2, div.slide h3, div.slide h4, div.slide h5, div.slide h6 {
+	color: #336699;
+}
+
+img {
+	display: inline;
+	vertical-align: middle;
+}
+
+em {
+	background-color: #6699CC;
+	padding: .1em .5em;
+	color: white;
+	font-variant: small-caps;
+	border-radius: .3em;
+	font-size: .7em;
+}
+
+a {
+	color: #336699;
+	text-decoration: none;
+}
+
+strong {
+	color: #336699;
+	font-variant: small-caps;
+	font-size: 1.2em;
+}
