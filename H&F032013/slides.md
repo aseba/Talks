@@ -6,6 +6,12 @@
 
 ---
 
+![Olapic](images/olapic.jpg)
+
+.fx: titleslide
+
+---
+
 # Amazon Web Services
 
 ---
