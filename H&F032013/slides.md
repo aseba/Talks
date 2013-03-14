@@ -69,6 +69,8 @@
 
 ## Sebastian Alvarez
 
+## http://aseba.github.com/talks/
+
 ## <img src="images/twitter-bird-light-bgs.png" style="width: 80px;"> @aseba
 
 ## sebas@olapic.com
