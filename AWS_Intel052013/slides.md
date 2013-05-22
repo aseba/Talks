@@ -108,6 +108,21 @@
 
 ---
 
+#Numeros al 22-05-2013
+
+- ~10M Hits diarios
+- ~1.5M pageviews diarios
+- 120k Fotos publicadas activas
+- 8.6k Commits en el master branch
+- 20 Virtual Servers
+- 13 Coders
+- 3 ELB
+- 2 MySQL RDS (1 Read Replica)
+- 2 MongoDB (1 Slave)
+- 1 Redis
+
+---
+
 #Preguntas?
 
 .fx: splash
